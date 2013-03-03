@@ -15,9 +15,9 @@
 #
 
 # Inherit the proprietary counterpart
-$(call inherit-product-if-exists, vendor/sony/tapioca/tapioca-vendor.mk)
+$(call inherit-product-if-exists, vendor/sony/tapioca_ds/tapioca_ds-vendor.mk)
 
-DEVICE_PACKAGE_OVERLAYS += device/sony/tapioca/overlay
+DEVICE_PACKAGE_OVERLAYS += device/sony/tapioca_ds/overlay
 
 # Inherit the tamsui-common definitions
 $(call inherit-product, device/sony/tamsui-common/tamsui.mk)
@@ -45,6 +45,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/config/init.sony.usb.rc:root/init.sony.usb.rc
 
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/config/init.device.rc:root/init.device.rc \
     $(LOCAL_PATH)/config/fstab.sony:root/fstab.sony
 
 PRODUCT_COPY_FILES += \
@@ -72,7 +73,7 @@ PRODUCT_COPY_FILES += \
 
 $(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
 
-$(call inherit-product-if-exists, vendor/sony/tapioca/tapioca-vendor.mk)
+$(call inherit-product-if-exists, vendor/sony/tapioca_ds/tapioca_ds-vendor.mk)
 
 # Wifi
 BOARD_WLAN_DEVICE_REV := bcm4330_b1
