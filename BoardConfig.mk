@@ -8,7 +8,7 @@ USE_CAMERA_STUB := true
 
 TARGET_SPECIFIC_HEADER_PATH += device/sony/tapioca_ds/include
 
-TARGET_KERNEL_CONFIG := cyanogen_tapioca_ds_defconfig
+TARGET_KERNEL_CONFIG := cyanogen_tapioca_defconfig
 BOARD_KERNEL_CMDLINE := device/sony/tapioca_ds/config/cmdline.txt
 
 # Partition information
